@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Influix Team - Creator Application</title>
+    <meta name="description" content="Apply to join Influix's curated network of vetted creators. Join our influencer team and connect with top brands.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-dm-sans { font-family: 'DM Sans', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .text-hero { font-size: clamp(2.5rem, 5vw, 4rem); }
+        .text-display-1 { font-size: clamp(2rem, 4vw, 3rem); }
+        .text-display-2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .section-padding { padding: 6rem 0; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .gradient-bg { background: linear-gradient(135deg, #0EA5E9 0%, #22C55E 100%); }
+        
+        /* Custom colors */
+        :root {
+            --primary: #0EA5E9;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --accent: #22C55E;
+            --primary-light: #38BDF8;
+            --accent-light: #4ADE80;
+        }
+        
+        .bg-primary { background-color: var(--primary); }
+        .bg-dark { background-color: var(--dark); }
+        .bg-light { background-color: var(--light); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .bg-accent-light { background-color: var(--accent-light); }
+        
+        .text-primary { color: var(--primary); }
+        .text-dark { color: var(--dark); }
+        .text-light { color: var(--light); }
+        .text-accent { color: var(--accent); }
+        .text-primary-light { color: var(--primary-light); }
+        .text-accent-light { color: var(--accent-light); }
+        
+        .border-primary { border-color: var(--primary); }
+        .border-dark { border-color: var(--dark); }
+        .border-light { border-color: var(--light); }
+        .border-accent { border-color: var(--accent); }
+        
+        .hover\:bg-primary:hover { background-color: var(--primary); }
+        .hover\:bg-primary\/90:hover { background-color: rgba(14, 165, 233, 0.9); }
+        .hover\:text-primary:hover { color: var(--primary); }
+        .hover\:text-white:hover { color: white; }
+        .hover\:bg-white:hover { background-color: white; }
+        .hover\:shadow-xl:hover { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+        
+        .transition-all { transition: all 0.3s ease; }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+        
+        /* Flip card animations */
+        .flip-card { perspective: 1000px; }
+        .flip-card-inner { transition: transform 0.6s; transform-style: preserve-3d; }
+        .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+        .flip-card-front, .flip-card-back { backface-visibility: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .flip-card-back { transform: rotateY(180deg); }
+        .flip-card-front { position: relative; }
+        
+        /* Carousel animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll { animation: scroll 30s linear infinite; }
+    </style>
+</head>
+<body class="font-inter text-gray-900 bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/logo/logo.png" alt="Influix Logo" class="h-8 w-auto mr-3">
+                    <span class="text-2xl font-bold text-dark font-display">Influix</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#gallery" class="text-gray-600 hover:text-primary transition-colors font-medium">Featured</a>
+                    <a href="index.html#how-it-works" class="text-gray-600 hover:text-primary transition-colors font-medium">How it works</a>
+                    <a href="index.html#why-us" class="text-gray-600 hover:text-primary transition-colors font-medium">Why us</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-br from-primary/5 to-accent/5">
+        <div class="container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-hero font-display font-bold text-dark mb-6 leading-none tracking-tighter">
+                    Join Our Creator Network
+                </h1>
+                <p class="text-xl lg:text-2xl text-gray-600 mb-8 font-dm-sans font-normal leading-relaxed">
+                    Ready to connect with top brands and grow your influence? Apply to join Influix's curated network of vetted creators.
+                </p>
+                <div class="flex justify-center mb-8">
+                    <img src="images/logo/logo.png" alt="Influix Logo" class="h-16 w-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-display-1 font-display font-semibold text-dark mb-4 tracking-tight">
+                        Creator Application
+                    </h2>
+                    <p class="text-lg text-gray-600 font-dm-sans">
+                        Tell us about yourself and your content. We'll review your application and get back to you within 48 hours.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                    <div class="aspect-video w-full">
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfSeYIfGZ7-e3GErgMiauIQScztIS7k0DQAufo-kclz_bUEYA/viewform?embedded=true" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-sm text-gray-500 font-dm-sans">
+                        Having trouble with the form? <a href="mailto:hello@influencehub.net" class="text-primary hover:underline">Email us directly</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-display-2 font-display font-semibold text-dark mb-6 tracking-tight">
+                    Why Join Influix?
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-display font-semibold text-dark mb-4 tracking-tight">Curated Brand Partnerships</h3>
+                    <p class="text-gray-600 font-dm-sans leading-relaxed">Connect with brands that align with your values and audience. No more random brand requests.</p>
+                </div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-display font-semibold text-dark mb-4 tracking-tight">Professional Support</h3>
+                    <p class="text-gray-600 font-dm-sans leading-relaxed">Get help with campaign briefs, content strategy, and performance tracking from our team.</p>
+                </div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-display font-semibold text-dark mb-4 tracking-tight">Growth Opportunities</h3>
+                    <p class="text-gray-600 font-dm-sans leading-relaxed">Build your portfolio with diverse brand collaborations and expand your reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white">
+        <div class="container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold mb-8 tracking-tight">Questions About Joining?</h2>
+                <p class="text-xl lg:text-2xl mb-10 opacity-90 font-dm-sans font-normal leading-relaxed">
+                    Get in touch with our team to learn more about the application process.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="border-2 border-white text-white px-12 py-5 rounded-2xl text-lg font-medium hover:bg-white hover:text-primary transition-all duration-200 font-dm-sans">
+                        Contact Us
+                    </a>
+                    <a href="index.html" class="text-white px-12 py-5 rounded-2xl text-lg font-medium hover:bg-white/10 transition-all duration-200 font-dm-sans">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-2">
+                        <img src="images/logo/logo.png" alt="Influix Logo" class="h-6 w-auto mr-2">
+                        <span class="text-xl font-bold text-white font-display">Influix</span>
+                    </div>
+                    <p class="text-gray-400 text-sm font-dm-sans">© 2024 Influix. All rights reserved.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="index.html#gallery" class="text-gray-300 hover:text-white transition-colors font-dm-sans">Featured</a>
+                    <a href="index.html#how-it-works" class="text-gray-300 hover:text-white transition-colors font-dm-sans">How it works</a>
+                    <a href="index.html#why-us" class="text-gray-300 hover:text-white transition-colors font-dm-sans">Why us</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans">Contact</a>
+                    <a href="mailto:hello@influencehub.net" class="text-gray-300 hover:text-white transition-colors font-dm-sans">hello@influencehub.net</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
