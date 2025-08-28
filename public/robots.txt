@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
  
-Sitemap: https://influix.com/sitemap.xml 
+Sitemap: https://influencehub.net/sitemap.xml 
