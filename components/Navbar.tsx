@@ -37,8 +37,8 @@ export default function Navbar() {
                 Login
               </a>
               <a
-                href="https://app.influencehub.net/select-role"
-                className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition text-sm font-medium"
+                href="https://app.influencehub.net"
+                className="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-sm font-medium"
               >
                 Sign Up
               </a>
@@ -53,8 +53,8 @@ export default function Navbar() {
                 Login
               </a>
               <a
-                href="https://app.influencehub.net/select-role"
-                className="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition text-sm font-medium"
+                href="https://app.influencehub.net"
+                className="px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-sm font-medium"
               >
                 Sign Up
               </a>
