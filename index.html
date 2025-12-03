@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
-    <title>InfluenceHub — Create Your Influencer Profile</title>
-    <meta name="description" content="InfluenceHub is a media-kit style creator profile that showcases your platforms, stats, audience insights, and brand-ready identity in one shareable link.">
+    <title>InfluenceHub – Build Your Creator Media Kit and Get Discovered by Brands</title>
+    <meta name="description" content="InfluenceHub helps creators build a professional media kit profile that looks like a resume for creators. Build your profile today and get discovered by brands when the discovery platform launches.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="InfluenceHub — Create Your Influencer Profile">
-    <meta property="og:description" content="InfluenceHub is a media-kit style creator profile that showcases your platforms, stats, audience insights, and brand-ready identity in one shareable link.">
+    <meta property="og:title" content="InfluenceHub – Build Your Creator Media Kit and Get Discovered by Brands">
+    <meta property="og:description" content="InfluenceHub helps creators build a professional media kit profile that looks like a resume for creators. Build your profile today and get discovered by brands when the discovery platform launches.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://influencehub.net">
     <meta property="og:image" content="/og.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="InfluenceHub — Create Your Influencer Profile">
-    <meta name="twitter:description" content="InfluenceHub is a media-kit style creator profile that showcases your platforms, stats, audience insights, and brand-ready identity in one shareable link.">
+    <meta name="twitter:title" content="InfluenceHub – Build Your Creator Media Kit and Get Discovered by Brands">
+    <meta name="twitter:description" content="InfluenceHub helps creators build a professional media kit profile that looks like a resume for creators. Build your profile today and get discovered by brands when the discovery platform launches.">
     <meta name="twitter:image" content="/og.png">
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": "SoftwareApplication",
       "name": "InfluenceHub",
       "url": "https://influencehub.net",
-      "description": "InfluenceHub is a tool for creators to build a professional influencer profile and media kit in one link.",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "All",
+      "description": "InfluenceHub is a creator media kit builder that helps creators present themselves professionally today and get discovered by brands when the discovery platform launches.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Any",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -84,6 +84,7 @@
         body { 
             font-family: 'DM Sans', 'Inter', sans-serif; 
             line-height: 1.6;
+            overflow-x: hidden;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'DM Sans', sans-serif;
@@ -225,25 +226,44 @@
     <!-- Hero Section -->
     <section class="section-padding hero-bg" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('images/wallpapers/banner.jpg'); background-size: cover; background-position: center; background-attachment: scroll;">
         <div class="container px-4 sm:px-6">
-            <div class="text-center max-w-5xl mx-auto">
-                <div class="flex justify-center mb-6 sm:mb-8">
-                    <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-12 sm:h-16 w-auto">
+            <div class="mx-auto flex max-w-4xl flex-col items-center md:items-start justify-center md:justify-start gap-8">
+                <!-- Left column: text + buttons -->
+                <div class="max-w-2xl text-center md:text-left w-full">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight">
+                        Your Professional Profile
+                        <br />
+                        Ready for Brands.
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 font-dm-sans leading-relaxed">
+                        A clean, modern media kit built for influencers. Simple to share. Designed for brand discovery.
+                    </p>
+                    <!-- Buttons row -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 sm:mb-6 w-full sm:w-auto">
+                        <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto inline-flex items-center justify-center rounded-xl px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white bg-primary hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl font-dm-sans min-h-[48px]">
+                            Create your creator profile
+                        </a>
+                        <!-- TODO: Re-enable this secondary CTA once example profile is approved -->
+                        <!--
+                        <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center rounded-xl px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-gray-200 border-2 border-gray-400/70 bg-transparent hover:bg-white/5 transition-all duration-200 font-dm-sans min-h-[48px]">
+                            View example profile
+                        </a>
+                        -->
+                    </div>
+                    <!-- Trust line -->
+                    <p class="text-xs sm:text-sm text-gray-400 font-dm-sans">
+                        Already trusted by creators with 800,000+ combined followers.
+                    </p>
                 </div>
-                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight sm:leading-none tracking-tight sm:tracking-tighter px-2">
-                    Your Professional Creator Profile — In One Link.
-                </h1>
-                <p class="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
-                    A media kit, portfolio, and creator identity built for influencers. Clean, modern, and ready to share with brands.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-6 sm:mb-8 md:mb-10 px-4">
-                    <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto bg-primary text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl font-dm-sans min-h-[48px] flex items-center justify-center">
-                        Create Your Influencer Profile
-                    </a>
-                    <a href="https://app.influencehub.net/login" class="w-full sm:w-auto border-2 border-primary text-primary px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
-                        Log In
-                    </a>
+                <!-- TODO: Re-enable hero mockup once we have approved example profile content -->
+                <!--
+                <div class="flex flex-1 items-center justify-center w-full md:w-auto mt-6 md:mt-0">
+                    <div class="relative rounded-2xl sm:rounded-3xl bg-white/5 backdrop-blur-sm p-4 sm:p-6 border border-white/10 w-full max-w-[280px] sm:max-w-none">
+                        <div class="h-64 w-40 sm:h-72 sm:w-44 md:h-80 md:w-52 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-primary/30 via-primary/40 to-accent/40 flex items-center justify-center text-xs sm:text-sm font-medium text-white/90 shadow-xl mx-auto">
+                            Creator Profile Mockup
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 font-inter font-medium px-4">InfluenceHub gives creators a polished public profile to showcase their platforms, performance, audience, and brand-ready story.</p>
+                -->
             </div>
         </div>
     </section>
@@ -292,15 +312,6 @@
     <!-- How It Works -->
     <section id="how-it-works" class="py-8 sm:py-12 bg-blue-100/30">
         <div class="container px-4 sm:px-6">
-            <div class="text-center mb-12 sm:mb-16 md:mb-20">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">
-                    Your Creator Identity, All In One Place.
-                </h2>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
-                    Show your platforms, performance, audience insights, and About Me — all in a beautiful public profile designed for influencers.
-                </p>
-            </div>
-            
             <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
                 <!-- Left Side: Media Carousel -->
                 <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 p-4 sm:p-6 md:p-8 order-2 lg:order-1">
@@ -331,7 +342,7 @@
                         <div class="text-3xl sm:text-4xl flex-shrink-0">📋</div>
                         <div>
                             <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">Showcase Your Platforms</h3>
-                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Your profile acts like a resume for creators, consolidating your content, stats, audiences, and past collaborations in one place.</p>
                         </div>
                     </div>
                     
@@ -339,7 +350,7 @@
                         <div class="text-3xl sm:text-4xl flex-shrink-0">🎯</div>
                         <div>
                             <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">Professional Media Kit</h3>
-                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Helps small creators look professional with a media kit that consolidates your content, stats, audiences, and past collaborations.</p>
                         </div>
                     </div>
                     
@@ -347,7 +358,7 @@
                         <div class="text-3xl sm:text-4xl flex-shrink-0">🚀</div>
                         <div>
                             <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">One Link To Share</h3>
-                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Build now; visibility comes soon. When the discovery platform launches, brands will be able to browse creator profiles to find TikTok and Instagram influencers for brand deals.</p>
                         </div>
                     </div>
                 </div>
@@ -360,10 +371,10 @@
         <div class="container px-4 sm:px-6">
             <div class="text-center mb-12 sm:mb-16 md:mb-20">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">
-                    Meet our Featured Creators
+                    Featured Creators
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
-                    Full profiles with engagement and audience insights available on request.
+                    Creators using InfluenceHub to showcase their work.
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-6xl mx-auto items-start">
@@ -476,10 +487,10 @@
             </div>
             <div class="text-center mt-12 sm:mt-16 px-4">
                 <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto bg-primary text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl inline-block font-dm-sans min-h-[48px] flex items-center justify-center">
-                    Create Your Influencer Profile
+                    Create your creator profile
                 </a>
                 <p class="text-xs sm:text-sm text-gray-500 mt-4 font-inter font-medium max-w-2xl mx-auto">
-                    Build your professional creator profile today
+                    Build your professional creator media kit profile today — and get discovered by brands when the discovery platform launches.
                 </p>
             </div>
         </div>
@@ -494,21 +505,21 @@
                 <div class="text-center mb-12 sm:mb-16 md:mb-20">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">Your Creator Identity, All In One Place.</h2>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
-                        Show your platforms, performance, audience insights, and About Me — all in a beautiful public profile designed for influencers.
+                        Your InfluenceHub profile presents your platforms, niche, audience size, and best content in a polished media-kit style layout that brands instantly understand. When the discovery platform launches, brands will be able to browse creators to find TikTok and Instagram influencers for product promotions and partnerships.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
                     <div class="text-center p-6 sm:p-8">
                         <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">Showcase Your Platforms</h3>
-                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Your profile acts like a resume for creators, consolidating your content, stats, audiences, and past collaborations in one place.</p>
                     </div>
                     <div class="text-center p-6 sm:p-8">
                         <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">Professional Media Kit</h3>
-                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Helps small creators look professional with a media kit that consolidates your content, stats, audiences, and past collaborations.</p>
                     </div>
                     <div class="text-center p-6 sm:p-8">
                         <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">One Link To Share</h3>
-                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Build now; visibility comes soon. When the discovery platform launches, brands will be able to browse creator profiles to find TikTok and Instagram influencers for brand deals.</p>
                     </div>
                 </div>
             </div>
@@ -526,13 +537,13 @@
     <section class="py-12 sm:py-16 md:py-24 bg-primary text-white">
         <div class="container px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold mb-4 sm:mb-6 md:mb-8 tracking-tight px-2">Ready to Build Your Creator Profile?</h2>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold mb-4 sm:mb-6 md:mb-8 tracking-tight px-2">Ready to get discovered by brands?</h2>
                 <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 opacity-90 font-dm-sans font-normal leading-relaxed px-4">
-                    Join early creators using InfluenceHub to present their identity professionally.
+                    Build your professional creator media kit profile today — and get discovered by brands when the discovery platform launches.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
                     <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
-                        Create Your Influencer Profile
+                        Create your creator profile
                     </a>
                     <a href="https://app.influencehub.net/login" class="w-full sm:w-auto text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-white/10 transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
                         Log In
