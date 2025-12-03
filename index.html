@@ -97,9 +97,17 @@
         .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
         @media (min-width: 640px) { .container { padding: 0 1.5rem; } }
         @media (min-width: 1024px) { .container { padding: 0 2rem; } }
-        .section-padding { padding: 4rem 0; }
+        .section-padding { padding: 3rem 0; }
         @media (min-width: 640px) { .section-padding { padding: 5rem 0; } }
         @media (min-width: 1024px) { .section-padding { padding: 6rem 0; } }
+        
+        /* Mobile-specific fixes */
+        @media (max-width: 640px) {
+            /* Prevent horizontal scroll */
+            body { overflow-x: hidden; }
+            /* Disable fixed background on mobile for better performance */
+            .hero-bg { background-attachment: scroll !important; }
+        }
         .card-shadow { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
         .gradient-bg { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); }
         
@@ -128,6 +136,12 @@
             min-height: 400px;
         }
         
+        @media (max-width: 640px) {
+            .flip-card {
+                min-height: 350px;
+            }
+        }
+        
         .flip-card-inner {
             position: relative;
             width: 100%;
@@ -136,6 +150,12 @@
             transition: transform 0.8s;
             transform-style: preserve-3d;
             min-height: 400px;
+        }
+        
+        @media (max-width: 640px) {
+            .flip-card-inner {
+                min-height: 350px;
+            }
         }
         
         .flip-card.flipped .flip-card-inner {
@@ -181,10 +201,10 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div class="container">
-            <div class="flex items-center justify-between h-16 px-6">
-                <a href="/" class="flex items-center">
-                    <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-8 w-auto mr-3">
-                    <span class="text-2xl font-bold text-dark font-dm-sans">InfluenceHub</span>
+            <div class="flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">
+                <a href="/" class="flex items-center min-w-0">
+                    <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-6 sm:h-8 w-auto mr-2 sm:mr-3 flex-shrink-0">
+                    <span class="text-lg sm:text-2xl font-bold text-dark font-dm-sans truncate">InfluenceHub</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#gallery" class="text-gray-600 hover:text-dark transition-colors font-dm-sans">Featured</a>
@@ -194,40 +214,36 @@
                     <a href="https://app.influencehub.net/signup" class="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition font-dm-sans">Create Your Influencer Profile</a>
                 </div>
                 <div class="md:hidden flex items-center space-x-2">
-                    <a href="https://app.influencehub.net/login" class="px-3 py-1.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition text-sm font-dm-sans">Log In</a>
-                    <a href="https://app.influencehub.net/signup" class="px-3 py-1.5 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-sm font-dm-sans">Create Your Influencer Profile</a>
-                    <button class="p-2 text-gray-600 hover:text-dark">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                    <a href="https://app.influencehub.net/signup" class="px-3 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-sm font-dm-sans whitespace-nowrap min-h-[44px] flex items-center">
+                        Sign Up
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="section-padding" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('images/wallpapers/banner.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <div class="container">
+    <section class="section-padding hero-bg" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('images/wallpapers/banner.jpg'); background-size: cover; background-position: center; background-attachment: scroll;">
+        <div class="container px-4 sm:px-6">
             <div class="text-center max-w-5xl mx-auto">
-                <div class="flex justify-center mb-8">
-                    <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-16 w-auto">
+                <div class="flex justify-center mb-6 sm:mb-8">
+                    <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-12 sm:h-16 w-auto">
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-8 leading-none tracking-tighter">
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight sm:leading-none tracking-tight sm:tracking-tighter px-2">
                     Your Professional Creator Profile — In One Link.
                 </h1>
-                <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed">
+                <p class="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
                     A media kit, portfolio, and creator identity built for influencers. Clean, modern, and ready to share with brands.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                    <a href="https://app.influencehub.net/signup" class="bg-primary text-white px-10 py-5 rounded-2xl text-lg font-medium hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl font-dm-sans">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-6 sm:mb-8 md:mb-10 px-4">
+                    <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto bg-primary text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl font-dm-sans min-h-[48px] flex items-center justify-center">
                         Create Your Influencer Profile
                     </a>
-                    <a href="https://app.influencehub.net/login" class="border-2 border-primary text-primary px-10 py-5 rounded-2xl text-lg font-medium hover:bg-primary hover:text-white transition-all duration-200 font-dm-sans">
+                    <a href="https://app.influencehub.net/login" class="w-full sm:w-auto border-2 border-primary text-primary px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
                         Log In
                     </a>
                 </div>
-                <p class="text-sm text-gray-300 font-inter font-medium">InfluenceHub gives creators a polished public profile to showcase their platforms, performance, audience, and brand-ready story.</p>
+                <p class="text-xs sm:text-sm text-gray-300 font-inter font-medium px-4">InfluenceHub gives creators a polished public profile to showcase their platforms, performance, audience, and brand-ready story.</p>
             </div>
         </div>
     </section>
@@ -235,36 +251,37 @@
 
 
     <!-- Creator Gallery Section -->
-    <section id="gallery" class="py-8 bg-blue-100/30">
-        <div class="container">
-            <div class="text-center mb-16">
-                <div class="flex flex-col items-center space-y-4">
-                    <div class="bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 shadow-lg">
-                        <h2 class="text-3xl sm:text-4xl font-playfair font-bold text-dark tracking-tight">Brands our creators have worked with</h2>
+    <section id="gallery" class="py-6 sm:py-8 bg-blue-100/30">
+        <div class="container px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <div class="flex flex-col items-center space-y-3 sm:space-y-4">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 shadow-lg w-full max-w-2xl">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-dark tracking-tight">Brands our creators have worked with</h2>
                     </div>
-                    <div class="bg-gradient-to-r from-primary/20 to-accent/20 rounded-full px-6 py-3 shadow-md">
-                        <h3 class="text-2xl font-playfair font-semibold text-dark tracking-tight">Creators Brands Can Trust</h3>
+                    <div class="bg-gradient-to-r from-primary/20 to-accent/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-md w-full max-w-xl">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-playfair font-semibold text-dark tracking-tight">Creators Brands Can Trust</h3>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center space-x-12 py-8">
-                    <!-- Brand Logos (6) -->
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+            <!-- Brand Logos - Horizontal scroll on mobile, centered on desktop -->
+            <div class="overflow-x-auto pb-4 -mx-4 sm:mx-0 sm:pb-0">
+                <div class="flex justify-start sm:justify-center items-center space-x-6 sm:space-x-8 md:space-x-12 py-4 sm:py-8 px-4 sm:px-0 min-w-max sm:min-w-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/classpass.png" alt="ClassPass" class="w-full h-full object-contain">
                     </div>
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/whitefox.png" alt="WhiteFox" class="w-full h-full object-contain">
                     </div>
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/samsung.png" alt="Samsung" class="w-full h-full object-contain">
                     </div>
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/doordash.png" alt="DoorDash" class="w-full h-full object-contain">
                     </div>
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/uber.png" alt="Uber" class="w-full h-full object-contain">
                     </div>
-                    <div class="w-32 h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <div class="w-24 sm:w-28 md:w-32 h-16 sm:h-18 md:h-20 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
                         <img src="images/brands/Target_logo.png" alt="Target" class="w-full h-full object-contain">
                     </div>
                 </div>
@@ -273,28 +290,26 @@
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="py-12 bg-blue-100/30">
-        <div class="container">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-dark mb-6 tracking-tight">
+    <section id="how-it-works" class="py-8 sm:py-12 bg-blue-100/30">
+        <div class="container px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">
                     Your Creator Identity, All In One Place.
                 </h2>
-                <p class="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
                     Show your platforms, performance, audience insights, and About Me — all in a beautiful public profile designed for influencers.
                 </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
                 <!-- Left Side: Media Carousel -->
-                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 p-8">
+                <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 p-4 sm:p-6 md:p-8 order-2 lg:order-1">
                     <div class="text-center">
-                        
-                        
                         <!-- Instagram Video Embed -->
-                        <div class="bg-white/80 rounded-2xl p-4 shadow-lg">
+                        <div class="bg-white/80 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg">
                             <div class="relative">
-                                <!-- Instagram Embed Attempt -->
-                                <div class="video-container w-56 h-80 mx-auto bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl flex items-center justify-center mb-3 overflow-hidden transform transition-all duration-1500 ease-out">
+                                <!-- Instagram Embed -->
+                                <div class="video-container w-full max-w-[224px] sm:max-w-[280px] h-auto aspect-[9/16] mx-auto bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl flex items-center justify-center mb-3 overflow-hidden transform transition-all duration-1500 ease-out">
                                     <iframe 
                                         src="https://www.instagram.com/p/DNgNcLYxvLU/embed/"
                                         width="100%" 
@@ -305,36 +320,34 @@
                                         class="rounded-xl">
                                     </iframe>
                                 </div>
-                                
-
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Right Side: Three Steps -->
-                <div class="space-y-8">
-                    <div class="flex items-start space-x-4 p-6 rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="text-4xl flex-shrink-0">📋</div>
+                <div class="space-y-4 sm:space-y-6 md:space-y-8 order-1 lg:order-2">
+                    <div class="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-3xl sm:text-4xl flex-shrink-0">📋</div>
                         <div>
-                            <h3 class="text-xl font-display font-semibold text-dark mb-2">Showcase Your Platforms</h3>
-                            <p class="text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
+                            <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">Showcase Your Platforms</h3>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-4 p-6 rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="text-4xl flex-shrink-0">🎯</div>
+                    <div class="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-3xl sm:text-4xl flex-shrink-0">🎯</div>
                         <div>
-                            <h3 class="text-xl font-display font-semibold text-dark mb-2">Professional Media Kit</h3>
-                            <p class="text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
+                            <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">Professional Media Kit</h3>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-4 p-6 rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="text-4xl flex-shrink-0">🚀</div>
+                    <div class="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-light border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div class="text-3xl sm:text-4xl flex-shrink-0">🚀</div>
                         <div>
-                            <h3 class="text-xl font-display font-semibold text-dark mb-2">One Link To Share</h3>
-                            <p class="text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
+                            <h3 class="text-lg sm:text-xl font-display font-semibold text-dark mb-2">One Link To Share</h3>
+                            <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
                         </div>
                     </div>
                 </div>
@@ -343,23 +356,23 @@
     </section>
 
     <!-- Creator Gallery -->
-    <section id="featured-creators" class="py-12 bg-blue-100/30">
-        <div class="container">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-dark mb-6 tracking-tight">
+    <section id="featured-creators" class="py-8 sm:py-12 bg-blue-100/30">
+        <div class="container px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">
                     Meet our Featured Creators
                 </h2>
-                <p class="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
                     Full profiles with engagement and audience insights available on request.
                 </p>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto items-start min-h-[500px]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-6xl mx-auto items-start">
                 <!-- Creator Cards -->
-                <div class="creator-card flip-card bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm cursor-pointer min-h-[500px]" onclick="this.classList.toggle('flipped')">
+                <div class="creator-card flip-card bg-white rounded-xl sm:rounded-2xl border border-gray-100 p-4 sm:p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm mx-auto sm:mx-0 cursor-pointer min-h-[400px] sm:min-h-[500px]" onclick="this.classList.toggle('flipped')">
                     <div class="flip-card-inner">
                         <!-- Front of card -->
                         <div class="flip-card-front">
-                            <div class="w-full h-72 rounded-xl mb-4 overflow-hidden">
+                            <div class="w-full h-56 sm:h-64 md:h-72 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden">
                                 <img src="images/featured/myles.jpeg" alt="Myles Leon" class="w-full h-full object-cover">
                             </div>
                             <h3 class="font-display font-semibold text-dark text-lg mb-2">Myles Leon</h3>
@@ -379,7 +392,7 @@
                         </div>
                         <!-- Back of card -->
                         <div class="flip-card-back text-center">
-                            <div class="w-full h-72 rounded-xl mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
+                            <div class="w-full h-56 sm:h-64 md:h-72 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
                                 <img src="images/featured/mylesbrands.png" alt="Brands Myles has worked with" class="w-full h-full object-contain">
                             </div>
                             <h3 class="font-display font-semibold text-dark text-lg mb-2">Past Brand Collabs</h3>
@@ -391,11 +404,11 @@
                     </div>
                 </div>
                 <!-- More creator cards... -->
-                <div class="creator-card flip-card bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm cursor-pointer min-h-[500px]" onclick="this.classList.toggle('flipped')">
+                <div class="creator-card flip-card bg-white rounded-xl sm:rounded-2xl border border-gray-100 p-4 sm:p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm mx-auto sm:mx-0 cursor-pointer min-h-[400px] sm:min-h-[500px]" onclick="this.classList.toggle('flipped')">
                     <div class="flip-card-inner">
                         <!-- Front of card -->
                         <div class="flip-card-front">
-                            <div class="w-full h-72 rounded-xl mb-4 overflow-hidden">
+                            <div class="w-full h-56 sm:h-64 md:h-72 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden">
                                 <img src="images/featured/palak.jpeg" alt="Palak Miglani" class="w-full h-full object-cover" style="object-position: center 25%;">
                             </div>
                             <h3 class="text-display font-semibold text-dark text-lg mb-2">Palak Miglani</h3>
@@ -414,7 +427,7 @@
                         </div>
                         <!-- Back of card -->
                         <div class="flip-card-back text-center">
-                            <div class="w-full h-72 rounded-xl mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
+                            <div class="w-full h-56 sm:h-64 md:h-72 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
                                 <img src="images/featured/palakbrands.png" alt="Brands Palak has worked with" class="w-full h-full object-contain">
                             </div>
                             <h3 class="font-display font-semibold text-dark text-lg mb-2">Past Brand Collabs</h3>
@@ -425,11 +438,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="creator-card flip-card bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm cursor-pointer min-h-[500px]" onclick="this.classList.toggle('flipped')">
+                <div class="creator-card flip-card bg-white rounded-xl sm:rounded-2xl border border-gray-100 p-4 sm:p-6 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 max-w-sm mx-auto sm:mx-0 cursor-pointer min-h-[400px] sm:min-h-[500px]" onclick="this.classList.toggle('flipped')">
                     <div class="flip-card-inner">
                         <!-- Front of card -->
                         <div class="flip-card-front">
-                            <div class="w-[249.33px] h-72 rounded-xl mb-4 overflow-hidden mx-auto">
+                            <div class="w-full h-56 sm:h-64 md:h-72 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden">
                                 <img src="images/featured/dustin.jpg" alt="Dustin Dela Cruz" class="w-full h-full object-cover">
                             </div>
                             <h3 class="font-display font-semibold text-dark text-lg mb-2">Dustin Dela Cruz</h3>
@@ -449,7 +462,7 @@
                         </div>
                         <!-- Back of card -->
                         <div class="flip-card-back text-center">
-                            <div class="w-full h-56 rounded-xl mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
+                            <div class="w-full h-48 sm:h-56 md:h-64 rounded-lg sm:rounded-xl mb-3 sm:mb-4 overflow-hidden bg-gray-50 flex items-center justify-center">
                                 <img src="images/featured/dustinbrands.png" alt="Brands Dustin has worked with" class="w-full h-full object-contain">
                             </div>
                             <h3 class="font-display font-semibold text-dark text-lg mb-2">Past Brand Collabs</h3>
@@ -461,11 +474,11 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-16">
-                <a href="https://app.influencehub.net/signup" class="bg-primary text-white px-12 py-5 rounded-2xl text-lg font-medium hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl inline-block font-dm-sans">
+            <div class="text-center mt-12 sm:mt-16 px-4">
+                <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto bg-primary text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl inline-block font-dm-sans min-h-[48px] flex items-center justify-center">
                     Create Your Influencer Profile
                 </a>
-                <p class="text-sm text-gray-500 mt-4 font-inter font-medium max-w-2xl mx-auto">
+                <p class="text-xs sm:text-sm text-gray-500 mt-4 font-inter font-medium max-w-2xl mx-auto">
                     Build your professional creator profile today
                 </p>
             </div>
@@ -475,27 +488,27 @@
 
 
     <!-- Why Us -->
-    <section id="why-us" class="py-12 bg-blue-100/30">
-        <div class="container">
-            <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-12 md:p-16 shadow-xl border border-gray-100/50">
-                <div class="text-center mb-20">
-                    <h2 class="text-3xl sm:text-4xl font-display font-semibold text-dark mb-6 tracking-tight">Your Creator Identity, All In One Place.</h2>
-                                    <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed">
-                    Show your platforms, performance, audience insights, and About Me — all in a beautiful public profile designed for influencers.
-                </p>
+    <section id="why-us" class="py-8 sm:py-12 bg-blue-100/30">
+        <div class="container px-4 sm:px-6">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-xl border border-gray-100/50">
+                <div class="text-center mb-12 sm:mb-16 md:mb-20">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight px-2">Your Creator Identity, All In One Place.</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
+                        Show your platforms, performance, audience insights, and About Me — all in a beautiful public profile designed for influencers.
+                    </p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div class="text-center p-8">
-                        <h3 class="text-2xl font-display font-semibold text-dark mb-4 tracking-tight">Showcase Your Platforms</h3>
-                        <p class="text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+                    <div class="text-center p-6 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">Showcase Your Platforms</h3>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Add your social platforms and key stats in one clean profile.</p>
                     </div>
-                    <div class="text-center p-8">
-                        <h3 class="text-2xl font-display font-semibold text-dark mb-4 tracking-tight">Professional Media Kit</h3>
-                        <p class="text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
+                    <div class="text-center p-6 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">Professional Media Kit</h3>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Share a brand-ready creator profile that looks great everywhere.</p>
                     </div>
-                    <div class="text-center p-8">
-                        <h3 class="text-2xl font-display font-semibold text-dark mb-4 tracking-tight">One Link To Share</h3>
-                        <p class="text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
+                    <div class="text-center p-6 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-display font-semibold text-dark mb-3 sm:mb-4 tracking-tight">One Link To Share</h3>
+                        <p class="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">Send your InfluenceHub link to brands, collaborators, or include it in your bio.</p>
                     </div>
                 </div>
             </div>
@@ -510,18 +523,18 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 bg-primary text-white">
-        <div class="container">
+    <section class="py-12 sm:py-16 md:py-24 bg-primary text-white">
+        <div class="container px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl font-display font-semibold mb-8 tracking-tight">Ready to Build Your Creator Profile?</h2>
-                <p class="text-xl lg:text-2xl mb-10 opacity-90 font-dm-sans font-normal leading-relaxed">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-semibold mb-4 sm:mb-6 md:mb-8 tracking-tight px-2">Ready to Build Your Creator Profile?</h2>
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 md:mb-10 opacity-90 font-dm-sans font-normal leading-relaxed px-4">
                     Join early creators using InfluenceHub to present their identity professionally.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="https://app.influencehub.net/signup" class="border-2 border-white text-white px-12 py-5 rounded-2xl text-lg font-medium hover:bg-white hover:text-primary transition-all duration-200 font-dm-sans">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+                    <a href="https://app.influencehub.net/signup" class="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
                         Create Your Influencer Profile
                     </a>
-                    <a href="https://app.influencehub.net/login" class="text-white px-12 py-5 rounded-2xl text-lg font-medium hover:bg-white/10 transition-all duration-200 font-dm-sans">
+                    <a href="https://app.influencehub.net/login" class="w-full sm:w-auto text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold hover:bg-white/10 transition-all duration-200 font-dm-sans min-h-[48px] flex items-center justify-center">
                         Log In
                     </a>
                 </div>
@@ -533,25 +546,24 @@
 
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center mb-2">
-                        <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-6 w-auto mr-2">
-                        <span class="text-xl font-bold text-white font-display">InfluenceHub</span>
+    <footer class="bg-dark text-white py-8 sm:py-12">
+        <div class="container px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start mb-2">
+                        <img src="images/logo/logo.png" alt="InfluenceHub Logo" class="h-5 sm:h-6 w-auto mr-2">
+                        <span class="text-lg sm:text-xl font-bold text-white font-display">InfluenceHub</span>
                     </div>
-                    <p class="text-gray-400 text-sm font-dm-sans">© 2025 InfluenceHub. All rights reserved.</p>
+                    <p class="text-gray-400 text-xs sm:text-sm font-dm-sans">© 2025 InfluenceHub. All rights reserved.</p>
                 </div>
-                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-                    <a href="#gallery" class="text-gray-300 hover:text-white transition-colors font-dm-sans">Gallery</a>
-                    <a href="what-is-an-influencer-profile.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans">What is an influencer profile?</a>
-                    <a href="create-influencer-profile.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans">How to create your profile</a>
-                    <a href="media-kit-guide.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans">Media kit guide</a>
-                    <a href="mailto:hello@influencehub.net" class="text-gray-300 hover:text-white transition-colors font-dm-sans">hello@influencehub.net</a>
+                <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-8 text-center">
+                    <a href="#gallery" class="text-gray-300 hover:text-white transition-colors font-dm-sans text-sm sm:text-base min-h-[44px] flex items-center">Gallery</a>
+                    <a href="what-is-an-influencer-profile.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans text-sm sm:text-base min-h-[44px] flex items-center">What is an influencer profile?</a>
+                    <a href="create-influencer-profile.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans text-sm sm:text-base min-h-[44px] flex items-center">How to create your profile</a>
+                    <a href="media-kit-guide.html" class="text-gray-300 hover:text-white transition-colors font-dm-sans text-sm sm:text-base min-h-[44px] flex items-center">Media kit guide</a>
+                    <a href="mailto:hello@influencehub.net" class="text-gray-300 hover:text-white transition-colors font-dm-sans text-sm sm:text-base min-h-[44px] flex items-center break-all">hello@influencehub.net</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
