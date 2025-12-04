@@ -46,26 +46,26 @@ export default function RosterPreview() {
 
   return (
     <Section id="roster" className="bg-light">
-      <div className="text-center mb-20">
-        <h2 className="text-display-1 sm:text-display-2 font-display font-semibold text-dark mb-6 tracking-tight">
+      <div className="text-center mb-12 sm:mb-16 md:mb-20 px-4 sm:px-0">
+        <h2 className="text-2xl sm:text-3xl md:text-display-1 lg:text-display-2 font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight">
           Meet our creators
         </h2>
-        <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed">
+        <p className="text-base sm:text-xl md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed">
           Full profiles with engagement and audience insights available on request.
         </p>
       </div>
       
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 px-4 sm:px-0">
         {creators.map((creator, index) => (
           <CreatorCard key={index} {...creator} />
         ))}
       </div>
       
-      <div className="text-center">
-        <Button href={rosterUrl} size="lg" className="mx-auto text-lg px-12 py-5">
+      <div className="text-center px-4 sm:px-0">
+        <Button href={rosterUrl} size="lg" className="w-full sm:w-auto mx-auto text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 min-h-[48px]">
           Open Full Roster
         </Button>
-        <p className="text-sm text-gray-500 mt-4 font-inter font-medium">
+        <p className="text-xs sm:text-sm text-gray-500 mt-4 font-inter font-medium">
           View detailed creator profiles, audience data, and past campaign results
         </p>
       </div>

@@ -3,9 +3,9 @@ import Button from './Button';
 export default function Hero() {
   return (
     <section className="section-padding gradient-bg">
-      <div className="container">
+      <div className="container px-4 sm:px-6">
         <div className="text-center max-w-5xl mx-auto">
-          <h1 className="text-hero sm:text-hero-lg lg:text-hero-xl font-display font-bold text-dark mb-8 leading-none tracking-tighter">
+          <h1 className="text-3xl sm:text-4xl md:text-hero lg:text-hero-lg xl:text-hero-xl font-display font-bold text-dark mb-6 sm:mb-8 leading-none tracking-tighter px-2">
             Connect your brand with{' '}
             <span className="text-primary relative">
               vetted creators
@@ -13,20 +13,20 @@ export default function Hero() {
             </span>
           </h1>
           
-          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed">
+          <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 sm:mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
             A curated roster reaching <span className="font-semibold text-dark">700K+</span> across TikTok, Instagram, and YouTube.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-            <Button href="#roster" size="lg" className="text-lg px-10 py-5">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-10 w-full sm:w-auto px-4 sm:px-0">
+            <Button href="#roster" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 min-h-[48px]">
               View the Roster →
             </Button>
-            <Button href="/contact" variant="secondary" size="lg" className="text-lg px-10 py-5">
+            <Button href="/contact" variant="secondary" size="lg" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 min-h-[48px]">
               Talk to us
             </Button>
           </div>
           
-          <p className="text-sm text-gray-500 font-inter font-medium">
+          <p className="text-xs sm:text-sm text-gray-500 font-inter font-medium px-4">
             No fees to browse. Curated matches only.
           </p>
         </div>
