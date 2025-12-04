@@ -20,10 +20,10 @@ export default function WhyUs() {
     <Section id="why-us" className="bg-white">
       <div className="text-center mb-12 sm:mb-16 md:mb-20 px-4 sm:px-0">
         <h2 className="text-2xl sm:text-3xl md:text-display-1 lg:text-display-2 font-display font-semibold text-dark mb-4 sm:mb-6 tracking-tight">
-          Why choose Influix?
+          Why choose InfluenceHub?
         </h2>
         <p className="text-base sm:text-xl md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed">
-          Unlike self-serve marketplaces, Influix hand-selects creators, manages campaigns end-to-end, and reports on outcomes. We focus on brand safety, authentic fit, and measurable results.
+          Unlike self-serve marketplaces, InfluenceHub hand-selects creators, manages campaigns end-to-end, and reports on outcomes. We focus on brand safety, authentic fit, and measurable results.
         </p>
       </div>
       

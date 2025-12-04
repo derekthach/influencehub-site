@@ -35,9 +35,16 @@ export default function Privacy() {
                 <h2 className="text-2xl font-semibold text-dark mb-4">Contact Us</h2>
                 <p className="text-gray-600">
                   If you have any questions about this Privacy Policy, please contact us at{' '}
-                  <a href="mailto:hello@influix.com" className="text-primary hover:text-primary/80">
-                    hello@influix.com
+                  <a href="mailto:hello@influencehub.net" className="text-primary hover:text-primary/80">
+                    hello@influencehub.net
                   </a>
+                </p>
+                
+                <hr className="my-8 border-gray-200" />
+                
+                <p className="mt-6 text-xs text-neutral-500">
+                  Business Owner: Derek Thach (Sole Proprietor)<br />
+                  Contact: hello@influencehub.net
                 </p>
               </div>
             </div>

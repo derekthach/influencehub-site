@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="container px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <div className="text-xl sm:text-2xl font-bold mb-2">Influix</div>
+            <div className="text-xl sm:text-2xl font-bold mb-2">InfluenceHub</div>
             <p className="text-gray-400 text-xs sm:text-sm">
-              © {currentYear} Influix. All rights reserved.
+              © {currentYear} InfluenceHub. All rights reserved.
             </p>
           </div>
           
@@ -19,11 +19,9 @@ export default function Footer() {
             <a href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base min-h-[44px] flex items-center">
               Contact
             </a>
-            <a href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base min-h-[44px] flex items-center">
-              Privacy
-            </a>
-            <a href="mailto:hello@influix.com" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base min-h-[44px] flex items-center break-all">
-              hello@influix.com
+            {/* Privacy page link removed - page still accessible at /privacy for Meta Business Verification */}
+            <a href="mailto:hello@influencehub.net" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base min-h-[44px] flex items-center break-all">
+              hello@influencehub.net
             </a>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">
           {/* Logo */}
           <a href="/" className="text-xl sm:text-2xl font-bold text-dark flex-shrink-0">
-            Influix
+            InfluenceHub
           </a>
           
           {/* Right side: Navigation Links + Auth Actions */}

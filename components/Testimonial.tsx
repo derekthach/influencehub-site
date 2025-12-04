@@ -6,7 +6,7 @@ export default function Testimonial() {
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-16 shadow-xl">
             <div className="text-4xl sm:text-5xl md:text-6xl mb-6 sm:mb-8">💬</div>
             <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-medium text-dark mb-6 sm:mb-8 leading-tight tracking-tight px-2">
-              "Influix made sourcing creators effortless and results measurable from day one."
+              "InfluenceHub made sourcing creators effortless and results measurable from day one."
             </blockquote>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
