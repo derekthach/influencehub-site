@@ -6,15 +6,17 @@ export default function Hero() {
       <div className="container px-4 sm:px-6">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-hero lg:text-hero-lg xl:text-hero-xl font-display font-bold text-dark mb-6 sm:mb-8 leading-none tracking-tighter px-2">
-            Connect your brand with{' '}
+            Your Professional Influencer Profile — Ready for{' '}
             <span className="text-primary relative">
-              vetted creators
+              Brands
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full"></div>
             </span>
           </h1>
           
           <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 sm:mb-10 max-w-4xl mx-auto font-dm-sans font-normal leading-relaxed px-4">
-            A curated roster reaching <span className="font-semibold text-dark">700K+</span> across TikTok, Instagram, and YouTube.
+            Turn your content, stats, and past collaborations into a clean, public influencer profile you can share with{' '}
+            <span className="font-semibold text-dark">any brand</span>
+            {' — without hacking together Canva decks or Google Docs.'}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-10 w-full sm:w-auto px-4 sm:px-0">
