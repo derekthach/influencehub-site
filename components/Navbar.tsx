@@ -1,6 +1,25 @@
+'use client';
+
 import Button from './Button';
+import { event as gaEvent } from '../lib/analytics/ga';
 
 export default function Navbar() {
+  const handleSignupClick = () => {
+    gaEvent({
+      action: 'signup_click',
+      category: 'conversion',
+      label: 'landing_page',
+    });
+  };
+
+  const handleLoginClick = () => {
+    gaEvent({
+      action: 'login_click',
+      category: 'engagement',
+      label: 'landing_page',
+    });
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="container">
@@ -33,12 +52,14 @@ export default function Navbar() {
               <a
                 href="https://app.influencehub.net"
                 className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition text-sm font-medium min-h-[40px] flex items-center"
+                onClick={handleLoginClick}
               >
                 Login
               </a>
               <a
                 href="https://app.influencehub.net"
                 className="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-sm font-medium min-h-[40px] flex items-center"
+                onClick={handleSignupClick}
               >
                 Sign Up
               </a>
@@ -49,12 +70,14 @@ export default function Navbar() {
               <a
                 href="https://app.influencehub.net"
                 className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition text-xs sm:text-sm font-medium min-h-[40px] flex items-center whitespace-nowrap"
+                onClick={handleLoginClick}
               >
                 Login
               </a>
               <a
                 href="https://app.influencehub.net"
                 className="px-3 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition text-xs sm:text-sm font-medium min-h-[40px] flex items-center whitespace-nowrap"
+                onClick={handleSignupClick}
               >
                 Sign Up
               </a>
@@ -64,4 +87,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-} 
+}  

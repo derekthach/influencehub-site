@@ -5,6 +5,9 @@ import '../styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// GA4 measurement ID for the marketing site.
+const GA_MEASUREMENT_ID = 'G-D6SE1WF8TZ'
+
 export const metadata: Metadata = {
   title: 'Influencer Media Kit Builder | Professional Creator Profiles for Brands',
   description: 'Create a professional influencer media kit with your stats, audience demographics, and brand collaborations — all in one clean, shareable profile for brands.',
@@ -121,8 +124,31 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
         />
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){window.dataLayer.push(arguments);}
+                  window.gtag = window.gtag || gtag;
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
         {children}
       </body>
     </html>
   )
-} 
+}
