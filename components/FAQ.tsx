@@ -25,7 +25,7 @@ export default function FAQ() {
                 How does InfluenceHub work for influencers?
               </h3>
               <p className="text-base sm:text-lg text-gray-600 font-dm-sans leading-relaxed">
-                Influencers and UGC creators create a profile, link their social accounts, 
+                Influencers and UGC creators build their media kit, link their social accounts, 
                 and apply to campaigns that match their niche. They submit content, handle 
                 revisions, and get paid once the brand approves their deliverables.
               </p>

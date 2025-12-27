@@ -51,7 +51,7 @@ export default function RosterPreview() {
           Meet our creators
         </h2>
         <p className="text-base sm:text-xl md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto font-dm-sans font-normal leading-relaxed">
-          Full profiles with engagement and audience insights available on request.
+          Full media kits with engagement and audience insights available on request.
         </p>
       </div>
       
@@ -66,7 +66,7 @@ export default function RosterPreview() {
           Open Full Roster
         </Button>
         <p className="text-xs sm:text-sm text-gray-500 mt-4 font-inter font-medium">
-          View detailed creator profiles, audience data, and past campaign results
+          View detailed creator media kits, audience data, and past campaign results
         </p>
       </div>
     </Section>

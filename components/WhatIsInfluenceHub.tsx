@@ -7,11 +7,10 @@ export default function WhatIsInfluenceHub() {
             What is InfluenceHub?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 font-dm-sans leading-relaxed px-2">
-            InfluenceHub is a platform that connects brands with vetted influencers 
-            and UGC creators. Brands post campaigns, set their budget and deliverables, 
-            and receive applications from pre-screened creators who want to collaborate. 
-            InfluenceHub centralizes influencer selection, content submissions, revisions, 
-            and payments—removing the need for email chains and spreadsheets.
+            InfluenceHub helps creators build a professional influencer media kit that showcases 
+            your stats, audience demographics, and brand collaborations. Create a clean, shareable 
+            profile that brands can view instantly—no more Canva decks or Google Docs. Build your 
+            media kit today and get discovered by brands.
           </p>
         </div>
       </div>
